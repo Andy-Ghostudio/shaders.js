@@ -35,7 +35,7 @@ void main() {
 
 	if (uv.x <= texelSize.x) p_left = p_right;
 	if (uv.x >= 1.0 - texelSize.x) p_right = p_left;
-	if (ux.y <= texelSize.y) p_down = p_up;
+	if (uv.y <= texelSize.y) p_down = p_up;
 	if (uv.y >= 1.0 - texelSize.y) p_up = p_down;
 
 	// Enhanced wave equation matching ShaderToy
@@ -57,7 +57,7 @@ void main() {
 		}
 	}
 
-	gl_FragColor = vec4(pressure, pVel),
+	gl_FragColor = vec4(pressure, pVel);
 		(p_right - p_left) / 2.0,
 		(p_up - p_down) / 2.0;	
 }
