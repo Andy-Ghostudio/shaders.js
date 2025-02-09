@@ -1,4 +1,6 @@
-export const simulationVertexShader = '
+export simulationVertexShader;
+
+const simulationVertexShader = '
 varying vec2 vUv;
 void main() {
 	vUv = uv;
