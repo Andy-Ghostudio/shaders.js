@@ -29,7 +29,7 @@ void main() {
 
 	vec2 texelSize = 1.0 / resolution;
 	float p_right = texture2D(textureA, uv + vec2(texelSize.x, 0.0)).x;
-	float p_left = texture2D(textureA, uv + vec2(0.0, texelSize.y)).x;
+	float p_left = texture2D(textureA, uv + vec2(-texelSize.x, 0.0)).x;
 	float p_up = texture2D(textureA, uv + vec2(0.0, texelSize.y)).x;
 	float p_down = texture2D(textureA, uv + vec2(0.0, -texelSize.y)).x;
 
