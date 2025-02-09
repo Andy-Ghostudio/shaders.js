@@ -1,12 +1,12 @@
-export const simulationVertexShader = '
+export const simulationVertexShader = `
 varying vec2 vUv;
 void main() {
-	vUv = uv;
-	gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 }
-';
+`;
 
-export const simulationFragmentShader = '
+export const simulationFragmentShader = `
 uniform sampler2D textureA;
 uniform vec2 mouse;
 uniform vec2 resolution;
@@ -61,17 +61,17 @@ void main() {
 		(p_right - p_left) / 2.0,
 		(p_up - p_down) / 2.0;	
 }
-';
+`;
 
-export const renderVertexShader = '
+export const renderVertexShader = `
 varying vec2 vUv;
 void main() {
 	vUv = uv;
 	gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 }
-';
+`;
 
-export const renderFragmentShader = '
+export const renderFragmentShader = `
 uniform sampler2D textureA;
 uniform sampler2D textureB;
 varying vec2 vUv;
@@ -88,4 +88,4 @@ void main() {
 
 	gl_FragColor = color + vec4(specular);
 }
-';
+`;
