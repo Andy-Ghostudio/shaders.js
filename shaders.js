@@ -57,9 +57,8 @@ void main() {
 		}
 	}
 
-	gl_FragColor = vec4(pressure, pVel);
-		(p_right - p_left) / 2.0,
-		(p_up - p_down) / 2.0;	
+	gl_FragColor = vec4(pressure, pVel, (p_right - p_left) / 2.0, (p_up - p_down) / 2.0);
+
 }
 `;
 
