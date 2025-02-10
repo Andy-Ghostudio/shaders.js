@@ -14,7 +14,7 @@ uniform float time;
 uniform int frame;
 varying vec2 vUv;
 
-const float delta = .5;
+const float delta = 1.1;
 
 void main() {
 	vec2 uv = vUv;
