@@ -14,7 +14,7 @@ uniform float time;
 uniform int frame;
 varying vec2 vUv;
 
-const float delta = 1.4;
+const float delta = 10;
 
 void main() {
 	vec2 uv = vUv;
@@ -39,8 +39,8 @@ void main() {
 	if (uv.y >= 1.0 - texelSize.y) p_up = p_down;
 
 	// Enhanced wave equation matching ShaderToy
-	pVel += delta * (-2.0 * pressure + p_right + p_left) / 8.0;
-	pVel += delta * (-2.0 * pressure + p_up + p_down) / 8.0;
+	pVel += delta * (-2.0 * pressure + p_right + p_left) / 4.0;
+	pVel += delta * (-2.0 * pressure + p_up + p_down) / 4.0;
 
 	pressure += delta * pVel;
 
