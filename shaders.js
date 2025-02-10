@@ -2,7 +2,7 @@ export const simulationVertexShader = `
 varying vec2 vUv;
 void main() {
     vUv = uv;
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 0.5);
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.2);
 }
 `;
 
@@ -14,7 +14,7 @@ uniform float time;
 uniform int frame;
 varying vec2 vUv;
 
-const float delta = 0.2;
+const float delta = 1.8;
 
 void main() {
 	vec2 uv = vUv;
