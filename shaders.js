@@ -28,7 +28,7 @@ void main() {
 	float pVel = data.y;
  	float decay = .8; 
 
-	vec2 texelSize = 3.0 / resolution;
+	vec2 texelSize = 4.0 / resolution;
 	float p_right = texture2D(textureA, uv + vec2(texelSize.x, 0.0)).x;
 	float p_left = texture2D(textureA, uv + vec2(-texelSize.x, 0.0)).x;
 	float p_up = texture2D(textureA, uv + vec2(0.0, texelSize.y)).x;
