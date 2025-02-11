@@ -14,7 +14,7 @@ uniform float time;
 uniform int frame;
 varying vec2 vUv;
 
-const float delta = 1.2; // was 1.4
+const float delta = 1.3; // was 1.4
 
 void main() {
 	vec2 uv = vUv;
@@ -26,7 +26,7 @@ void main() {
 	vec4 data = texture2D(textureA, uv);
 	float pressure = data.x;
 	float pVel = data.y;
- 	float decay = .6; 
+ 	float decay = .8; 
 
 	vec2 texelSize = 3.0 / resolution;
 	float p_right = texture2D(textureA, uv + vec2(texelSize.x, 0.0)).x;
