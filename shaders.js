@@ -26,9 +26,9 @@ void main() {
 	vec4 data = texture2D(textureA, uv);
 	float pressure = data.x;
 	float pVel = data.y;
- 	float decay = .95; 
+ 	float decay = .8; 
 
-	vec2 texelSize = 2.0 / resolution;
+	vec2 texelSize = 3.0 / resolution;
 	float p_right = texture2D(textureA, uv + vec2(texelSize.x, 0.0)).x;
 	float p_left = texture2D(textureA, uv + vec2(-texelSize.x, 0.0)).x;
 	float p_up = texture2D(textureA, uv + vec2(0.0, texelSize.y)).x;
@@ -48,7 +48,7 @@ void main() {
 	pVel -= 0.005 * delta * pressure;
 
 	pVel *= 1.0 - 0.002 * delta;
-	pressure *= 0.5; // was .999
+	pressure *= 0.999; // was .999
 
 	vec2 mouseUV = mouse / resolution;
 	if(mouse.x > 0.0) {
