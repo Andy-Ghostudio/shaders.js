@@ -14,7 +14,7 @@ uniform float time;
 uniform int frame;
 varying vec2 vUv;
 
-const float delta = 1; // was 1.4
+const float delta = 1.4; // was 1.4
 
 void main() {
 	vec2 uv = vUv;
@@ -48,7 +48,7 @@ void main() {
 	pVel -= 0.005 * delta * pressure;
 
 	pVel *= 1.0 - 0.002 * delta;
-	pressure *= 0.8 // was .999;
+	pressure *= 0.4 // was .999;
 
 	vec2 mouseUV = mouse / resolution;
 	if(mouse.x > 0.0) {
