@@ -48,7 +48,7 @@ void main() {
 	pVel -= 0.005 * delta * pressure;
 
 	pVel *= 1.0 - 0.002 * delta;
-	pressure *= 0.4 // was .999;
+	pressure *= 0.1; // was .999
 
 	vec2 mouseUV = mouse / resolution;
 	if(mouse.x > 0.0) {
